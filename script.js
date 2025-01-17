@@ -186,6 +186,18 @@ Exiba o resultado no console.*/
 
 // ----------------------ex9------------------------------
 
+// function fatorial(n){
+//     let resultado = n;
+//     for (let i = 1; i < n; i++){
+//         resultado *= i; 
+//     }
+//     return resultado;
+// }
+
+// const numero = Number(prompt("Digite um numero para calcular o fatorial: "));
+// const resultado = fatorial(numero);
+
+// console.log(resultado);
 
 
 // ----------------------------------------------------
@@ -198,6 +210,25 @@ Crie uma função que receba uma string.
 Inverta a string e compare com o original.
 Exiba no console se a palavra é ou não um palíndromo.*/
 
+// ----------------------ex10------------------------------
+
+
+// function verificarPalindromo(palavra) {
+//     const palavraInvertida = palavra.split('').reverse().join('');
+//     if (palavra === palavraInvertida) {
+//         console.log("A palavra é um palíndromo");
+//     } else {
+//         console.log("A palavra não é um palíndromo");
+//     }
+// }
+
+// const palavra = prompt("Digite uma palavra para verificar se é um palíndromo:");
+// verificarPalindromo(palavra);
+
+
+// -------------------------------------------------------
+
+
 /*11. Contar Vogais em uma Frase
 Descrição:
 Dada uma frase, conte o número de vogais.
@@ -206,12 +237,41 @@ Peça ao usuário uma frase.
 Use um loop para verificar cada caractere.
 Conte as vogais (a, e, i, o, u) e exiba o total.*/
 
+// ----------------------ex11------------------------------
+
+
+// let frase = prompt("Digite uma frase:");
+// let vogais = 'aeiouAEIOU';
+// let contador = 0;
+
+// for (let i = 0; i < frase.length; i++) {
+//     if (vogais.includes(frase[i])) {
+//         contador++;
+//     }
+// }
+
+// console.log("O número de vogais na frase é:", contador);
+
+
+
+// -------------------------------------------------------
+
 /*12. Gerar Números Aleatórios
 Descrição:
 Gere um número aleatório entre 1 e 100.
 Tarefas:
 Use a função Math.random e ajuste o intervalo para 1 a 100.
 Exiba o número gerado no console.*/
+
+
+// ----------------------ex12------------------------------
+
+// let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+// console.log("Número aleatório entre 1 e 100:", numeroAleatorio);
+
+// -------------------------------------------------------
+
+
 
 /*13. Substituir Números Negativos por Zero
 Descrição:
@@ -221,6 +281,22 @@ Crie um array como [4, -3, 2, -1, 0].
 Use um loop para verificar cada número.
 Substitua os números negativos por 0 e exiba o array no console.*/
 
+// ----------------------ex13------------------------------
+
+// let array = [4, -3, 2, -1, 0];
+
+// for (let i = 0; i < array.length; i++) {
+//     if (array[i] < 0) {
+//         array[i] = 0;
+//     }
+// }
+
+// console.log(array);
+
+// -------------------------------------------------------
+
+
+
 /*14. Verificar Palavras Proibidas em um Texto
 Descrição:
 Verifique se uma frase contém palavras proibidas.
@@ -229,6 +305,22 @@ Crie um array de palavras proibidas como ['palavra1', 'palavra2'].
 Peça ao usuário uma frase.
 Verifique se a frase contém alguma palavra do array e exiba uma mensagem de alerta.*/
 
+// ----------------------ex14------------------------------
+
+// let palavrasProibidas = ['pilantra', 'boboca'];
+// let fraseUsuario = prompt("Digite uma frase:");
+
+// for (let i = 0; i < palavrasProibidas.length; i++) {
+//     if (fraseUsuario.includes(palavrasProibidas[i])) {
+//         alert("A frase contém palavras proibidas.");
+//         break;
+//     }
+// }
+
+// -------------------------------------------------------
+
+
+
 /*15. Gerar uma Lista de Números Pares
 Descrição:
 Crie uma lista de números pares entre 1 e 20.
@@ -236,3 +328,42 @@ Tarefas:
 Use um loop para gerar os números pares.
 Adicione os números a um array e exiba-o no console.
 */
+
+// ----------------------ex15-------------------------------
+
+// let numerosPares = [];
+
+// for (let i = 1; i <= 20; i++) {
+//     if (i % 2 === 0) {
+//         numerosPares.push(i);
+//     }
+// }
+
+// console.log(numerosPares);
+
+// -------------------------------------------------------
+
+/*16 Crie uma função que receba um objeto do tipo OBJECT que represente um produto com as propriedades: nome, preço e quantidade.
+
+Adicione uma nova propriedade categoria ao objeto usando o operador spread.
+Utilize destructuring para extrair o nome e o preço do produto e exiba-os no console.
+Crie uma função que receba um produto e retorne uma mensagem no formato:
+"Produto: [nome] custa [preço] na categoria [categoria].*/
+
+// ----------------------ex16-------------------------------
+
+// function adicionarCategoria(produto, categoria) {
+//     return { ...produto, categoria };
+// }   
+
+// function exibirProduto(produto) {
+//     const { nome, preco, categoria } = produto;
+//     console.log(`Produto: ${nome} custa ${preco} na categoria ${categoria}.`);
+// }
+
+// const produto = { nome: 'Notebook', preco: 2500, quantidade: 10 };
+// const produtoComCategoria = adicionarCategoria(produto, 'Eletrônicos');
+// exibirProduto(produtoComCategoria);
+
+// -------------------------------------------------------
+
